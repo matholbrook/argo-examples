@@ -7,4 +7,4 @@ spec:
   - port: 80
     protocol: TCP
     name: flask
-  type: NodePort
+  type: LoadBalancer
