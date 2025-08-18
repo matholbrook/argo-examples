@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-secure
+  namespace: dev01
+  labels:
+    app: nginx-secure
+spec:
+  os:
+    name: linux
+  containers:
+  - image: nginxinc/nginx-unprivileged:alpine3.21
+    name: nginx
+    ports:
+    - containerPort: 80
+#    securityContext:
+#      allowPrivilegeEscalation: false
+#      capabilities:
+#        drop:
+#        - ALL
+#      runAsNonRoot: true
+#      runAsUser: 1000
+#      runAsGroup: 1000
+#      seccompProfile:
+#        type: RuntimeDefault
