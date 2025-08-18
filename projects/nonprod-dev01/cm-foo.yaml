@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: foo
+data:
+  file.conf: |
+    enemies=aliens
+    lives=3
+    enemies.cheat=true
+    enemies.cheat.level=idkfa
+    secret.code.passphrase=foofoofoo
